@@ -18,15 +18,17 @@ Published in CVPR 2019, written by S. Yoo, H. Bahng, S. Chung, J. Lee, J. Chang 
 
 ## Datasets
 - [Oxford102](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
-- [Pokemon] (https://www.kaggle.com/kvpratama/pokemon-images-dataset) (For one-shot colorization)
+- [Pokemon](https://www.kaggle.com/kvpratama/pokemon-images-dataset) (For one-shot colorization)
 
 
 ## Pre-trained model
-- [FlowerColorizationModel] (https://drive.google.com/open?id=1QoOEUDq6jNweSb8YaIttEwm1zFq7Fgf3) (Color_feature : RGB colors extracted by ColorThief)
-- [PokemonColorizationModel] (https://drive.google.com/open?id=1dFkvuEeI8CHL5b8tRDrTb3OdGESaK6qA) (Color_feature : Color distribution)
+- [FlowerColorizationModel](https://drive.google.com/open?id=1QoOEUDq6jNweSb8YaIttEwm1zFq7Fgf3)
+(Color_feature : RGB colors extracted by ColorThief)
+
+- [PokemonColorizationModel](https://drive.google.com/open?id=1dFkvuEeI8CHL5b8tRDrTb3OdGESaK6qA) (Color_feature : Color distribution)
 
 ## Important Configurations
-All recommeded values for configurations are based on [paper] (https://arxiv.org/abs/1906.11888) and [supplementary material] (http://openaccess.thecvf.com/content_CVPR_2019/supplemental/Yoo_Coloring_With_Limited_CVPR_2019_supplemental.pdf).
+All recommeded values for configurations are based on [paper](https://arxiv.org/abs/1906.11888) and [supplementary material](http://openaccess.thecvf.com/content_CVPR_2019/supplemental/Yoo_Coloring_With_Limited_CVPR_2019_supplemental.pdf).
 
 1. `--color_info` : Should be 'RGB' or 'dist'. What you want to use as a color information for color feature.
 
@@ -44,7 +46,7 @@ Experimental results on Oxford102 dataset.
 
 I randomly split the oxford102 dataset into a training set(80%) and a test set(20%)
 
-You can download full experimental results on my oxford102 test set. [Link] (https://drive.google.com/open?id=1pJJF1gOTMw9Om1NclTLYQQQEW-wxbLB3)
+You can download full experimental results on my oxford102 test set. [Link](https://drive.google.com/open?id=1pJJF1gOTMw9Om1NclTLYQQQEW-wxbLB3)
 
 | Input | Result | Ground Truth |
 | --- | --- | --- |
