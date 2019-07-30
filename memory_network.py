@@ -36,8 +36,8 @@ class Memory_Network(nn.Module):
         self.top_index = torch.zeros(self.mem_size).to(self.device)
         self.top_index = self.top_index - 1.0
         
-        self.color_value.require_grad = False
-        self.spatial_key.require_grad = False
+        self.color_value.requires_grad = False
+        self.spatial_key.requires_grad = False
         
         self.Linear = nn.Linear(512, spatial_feat_dim)
         self.body = [self.ResNet18, self.Linear]
