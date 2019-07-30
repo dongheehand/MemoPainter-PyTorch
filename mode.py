@@ -111,12 +111,12 @@ def train(args):
         f.write('g_loss : %04f \t d_loss : %04f \n'%(g_loss.item(), d_loss.item()))
         f.close()
         
-        if args.test_with_train and e % args.test_freq  == 0:
+        if args.test_with_train and (e + 1) % args.test_freq  == 0:
             generator.eval()
             test_operation(args, generator, mem, te_dataloader, device, e)
             generator.train()
         
-        if e % args.model_save_freq == 0:
+        if (e + 1) % args.model_save_freq == 0:
             torch.save(generator.state_dict(), os.path.join(model_path ,'generator_%03d.pt'%e))
             torch.save({'mem_model' : mem.state_dict(),
                        'mem_key' : mem.spatial_key.cpu(),

@@ -19,7 +19,7 @@ Published in CVPR 2019, written by S. Yoo, H. Bahng, S. Chung, J. Lee, J. Chang 
 ## Datasets
 - [Oxford102](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
 - [Pokemon](https://www.kaggle.com/kvpratama/pokemon-images-dataset) (For one-shot colorization)
-
+- [Superhero](https://drive.google.com/open?id=1GhxcPJAatGUPB6acw1-wVXgjBTC9B1Aa) (For few-shot colorization) I crawled images from the internet.
 
 ## Pre-trained model
 - [FlowerColorizationModel](https://drive.google.com/open?id=1QoOEUDq6jNweSb8YaIttEwm1zFq7Fgf3)
@@ -62,6 +62,14 @@ Experimental results on Pokemon data. Test images are crawled from the internet
 | <img src="sample_imgs/pokemon/0002_gray.png" width="640px"> |<img src="sample_imgs/pokemon/0002_result.png" width="640px"> | <img src="sample_imgs/pokemon/0002_GT.png" width="640px"> |
 | <img src="sample_imgs/pokemon/0005_gray.png" width="640px"> |<img src="sample_imgs/pokemon/0005_result.png" width="640px"> | <img src="sample_imgs/pokemon/0005_GT.png" width="640px"> |
 | <img src="sample_imgs/pokemon/0007_gray.png" width="640px"> |<img src="sample_imgs/pokemon/0007_result.png" width="640px"> | <img src="sample_imgs/pokemon/0007_GT.png" width="640px"> |
+
+Experimental results on Superhero data. Train images and test images are crawled from the internet.
+
+| Input | Result | Ground Truth |
+| --- | --- | --- |
+| <img src="sample_imgs/super_hero/0000_gray.png" width="640px"> |<img src="sample_imgs/super_hero/0000_result.png" width="640px"> | <img src="sample_imgs/super_hero/0000_GT.png" width="640px"> |
+| <img src="sample_imgs/super_hero/0005_gray.png" width="640px"> |<img src="sample_imgs/super_hero/0005_result.png" width="640px"> | <img src="sample_imgs/super_hero/0005_GT.png" width="640px"> |
+| <img src="sample_imgs/super_hero/0007_gray.png" width="640px"> |<img src="sample_imgs/super_hero/0007_result.png" width="640px"> | <img src="sample_imgs/super_hero/0007_GT.png" width="640px"> |
 
 ## Comments
 If you have any questions or comments on my codes, please email to me. [son1113@snu.ac.kr](mailto:son1113@snu.ac.kr)
