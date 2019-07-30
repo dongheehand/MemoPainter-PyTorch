@@ -159,7 +159,7 @@ class Memory_Network(nn.Module):
         color_sim = np.mean(np.array(color_sim), axis = 2)
         
         color_sim = torch.tensor(color_sim).to(self.device)
-        color_sim.require_grad = False
+        color_sim.requires_grad = False
         
         return color_sim
         

@@ -37,7 +37,7 @@ def train(args):
         te_dataloader = DataLoader(te_dataset, batch_size = args.batch_size, shuffle=False, drop_last = False)
     
     ### Networks for coloring
-    mem = Memory_Network(mem_size = args.mem_size, color_info = args.color_info, color_feat_dim = args.color_feat_dim, spatial_feat_dim = 512, top_k = args.top_k, alpha = args.alpha).to(device)
+    mem = Memory_Network(mem_size = args.mem_size, color_info = args.color_info, color_feat_dim = args.color_feat_dim, spatial_feat_dim = args.spatial_feat_dim, top_k = args.top_k, alpha = args.alpha).to(device)
     generator = unet_generator(args.input_channel, args.output_channel, args.n_feats, args.color_feat_dim).to(device)
     discriminator = Discriminator(args.input_channel + args.output_channel, args.color_feat_dim, args.img_size).to(device)
     
@@ -80,8 +80,8 @@ def train(args):
                 mem.memory_update(res_feature, color_feat, args.color_thres, idx)
 
             ### 3) Train Discriminator    
-            dis_color_feat = torch.cat([torch.unsqueeze(color_feat, 2) for _ in range(256)], dim =2)
-            dis_color_feat = torch.cat([torch.unsqueeze(dis_color_feat, 3) for _ in range(256)], dim =3)
+            dis_color_feat = torch.cat([torch.unsqueeze(color_feat, 2) for _ in range(args.img_size)], dim = 2)
+            dis_color_feat = torch.cat([torch.unsqueeze(dis_color_feat, 3) for _ in range(args.img_size)], dim = 3)
             fake_ab_channel = generator(l_channel, color_feat)
             real = discriminator(ab_channel, l_channel, dis_color_feat)
             d_loss_real = criterion_GAN(real, real_labels)
